@@ -28,13 +28,13 @@ m = 59.0
 # some neck,trunk,arm and leg dimensions in [m]
 from src import linkDimensions
 
-linkDimensions["Neck"]["X"] = linkDimensions["Neck"]["Y"] = 0.1003184713
-linkDimensions["T8"]["X"] = linkDimensions["T12"]["X"] = linkDimensions["L3"]["X"] = linkDimensions["L5"]["X"] = 0.06
+linkDimensions["Neck"]["X"] = linkDimensions["Neck"]["Y"] = 0.32
+linkDimensions["T8"]["X"] = linkDimensions["T12"]["X"] = linkDimensions["L3"]["X"] = linkDimensions["L5"]["X"] = 0.19
 linkDimensions["Pelvis"]["X"] = 0.225
 linkDimensions["Shoulder"]["Z"] = 0.115
-linkDimensions["UpperArm"]["X"] = linkDimensions["UpperArm"]["Z"] = 0.0923566879
-linkDimensions["ForeArm"]["X"] = linkDimensions["ForeArm"]["Z"] = 0.0700636942675159
+linkDimensions["UpperArm"]["X"] = linkDimensions["UpperArm"]["Z"] = 0.28
+linkDimensions["ForeArm"]["X"] = linkDimensions["ForeArm"]["Z"] = 0.22
+linkDimensions["UpperLeg"]["X"] = linkDimensions["UpperLeg"]["Y"] = 0.47
+linkDimensions["LowerLeg"]["X"] = linkDimensions["LowerLeg"]["Y"] = 0.34
 linkDimensions["Hand"]["Z"] = 0.025
 linkDimensions["Hand"]["X"] = 0.085
-linkDimensions["UpperLeg"]["X"] = linkDimensions["UpperLeg"]["Y"] = 0.1560509554
-linkDimensions["LowerLeg"]["X"] = linkDimensions["LowerLeg"]["Y"] = 0.1082802548
