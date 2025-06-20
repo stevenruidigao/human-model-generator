@@ -8,16 +8,16 @@ Below are the parameters that can be manually modified to configure the model. T
 |:----------------:|:-------------------------------------------------------------------------------------------------------------------------------------------:|
 | H                | Total height [m]                                                                                             |
 | m                | Total body mass [Kg]                                                                                         |
-| Neck [X, Y]         | Diameter of the neck [m]                                                                                                                        |
+| Neck [X, Y]         | Circumference of the neck [m]                                                                                                                        |
 | T8 [X] = T12 [X] =  L3 [X] =  L5 [X] | Depth of the trunk [m]                                                                                                                  |
 | Pelvis [X]       | Depth of the pelvis [m]                                                                                                                      |
 | Shoulder [Z]  | Width of the shoulder [m]                                                                                                                       |
-| UpperArm [X, Z]  | Diameter of the upper arm [m]                                                                                                                   |
-| ForeArm [X, Z]   | Diameter of the fore arm [m]                                                                                                                 |
+| UpperArm [X, Z]  | Circumference of the upper arm [m]                                                                                                                   |
+| ForeArm [X, Z]   | Circumference of the fore arm [m]                                                                                                                 |
+| UpperLeg [X, Y]  | Circumference of the upper leg [m]                                                                                                                 |
+| LowerLeg  [X, Y] | Circumference of the lower leg [m]                                                                                                                 |
 | Hand [Z]         | Height of the hand [m]                                                                                                                          |
 | Hand [X]         | Width of the hand [m]                                                                                                                         |
-| UpperLeg [X, Y]  | Diameter of the upper leg [m]                                                                                                                 |
-| LowerLeg  [X, Y] | Diameter of the lower leg [m]                                                                                                                 |
 
 </div>
 
@@ -25,19 +25,21 @@ Below are the parameters that can be manually modified to configure the model. T
 ## How to measure:
 Ensure to follow these guidelines carefully to obtain accurate measurements for configuring the model correctly.
 
-![Neck](https://github.com/user-attachments/assets/956a0e95-e0f5-4947-ac4b-a1a08a11a04a)
+![image](https://github.com/user-attachments/assets/64f9bf63-60d9-4dd0-b1f5-4d0172818581)
 
-![Neck (1)](https://github.com/user-attachments/assets/988fc378-c929-4dcb-9eaa-a4e9381f1a01)
+![image](https://github.com/user-attachments/assets/587f930b-9473-4871-8934-d5c421b3b131)
 
-![Neck (2)](https://github.com/user-attachments/assets/5a194839-7902-42c8-a628-4299d0b95dc6)
+![image](https://github.com/user-attachments/assets/52c3a9d7-9760-4c3a-a8bb-090b880a1cd1)
 
-![Neck (3)](https://github.com/user-attachments/assets/8eb5ecf9-917d-4331-8104-c55cfc1e2157)
+![image](https://github.com/user-attachments/assets/11529104-0c91-4b3c-8bba-7e647215350e)
 
-![Neck (4)](https://github.com/user-attachments/assets/017c068d-af08-4e0c-8685-84332ceeb6d0)
 
-![Neck (5)](https://github.com/user-attachments/assets/7f3d53d7-2503-4159-8808-07521d563ea4)
+![image](https://github.com/user-attachments/assets/883d6a65-3af3-40b2-bef7-770703ec37a1)
 
-![Neck (6)](https://github.com/user-attachments/assets/34fd78ca-86b8-4ea3-99f6-c8fe10d2827d)
+![image](https://github.com/user-attachments/assets/8347fbce-6097-49ec-8937-f54af9d359f9)
+
+![image](https://github.com/user-attachments/assets/8f1dbaec-45f1-471c-be9a-453fd5edbd11)
+
 
 
 

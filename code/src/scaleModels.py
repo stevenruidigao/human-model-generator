@@ -41,7 +41,6 @@ def scaleLink(H, linkDimensions):
     linkDimensions["L5"]["Z"] = 0.0295 * H
     linkDimensions["L5"]["Y"] = 0.1 
 
-    linkDimensions["Shoulder"]["X"] = linkDimensions["UpperArm"].get("X", 0)
     linkDimensions["Shoulder"]["Y"] = 0.259 * H / 3
 
     linkDimensions["Pelvis"]["Z"] = 0.078 * H
@@ -56,6 +55,18 @@ def scaleLink(H, linkDimensions):
     linkDimensions["Heel"]["X"] = linkDimensions["Foot"]["X"] / 100
     linkDimensions["Heel"]["Y"] = linkDimensions["Foot"]["Y"]
     linkDimensions["Heel"]["Z"] = linkDimensions["Foot"]["Z"] 
+    
+    
+    
+    
+    # Change the dimensions of the measured links
+    linkDimensions["Neck"]["X"] = linkDimensions["Neck"]["Y"] = linkDimensions["Neck"]["X"] / np.pi
+    linkDimensions["T8"]["X"] = linkDimensions["T12"]["X"] = linkDimensions["L3"]["X"] = linkDimensions["L5"]["X"] = linkDimensions["T8"]["X"] * 0.06 / 0.19
+    linkDimensions["UpperArm"]["X"] = linkDimensions["UpperArm"]["Z"] = linkDimensions["UpperArm"]["X"]  / np.pi
+    linkDimensions["ForeArm"]["X"] = linkDimensions["ForeArm"]["Z"] = linkDimensions["ForeArm"]["X"] / np.pi
+    linkDimensions["UpperLeg"]["X"] = linkDimensions["UpperLeg"]["Y"] = linkDimensions["UpperLeg"]["X"] / np.pi
+    linkDimensions["LowerLeg"]["X"] = linkDimensions["LowerLeg"]["Y"] = linkDimensions["LowerLeg"]["X"] / np.pi
+    linkDimensions["Shoulder"]["X"] = linkDimensions["UpperArm"].get("X", 0)
 
     return linkDimensions
 
