@@ -13,7 +13,7 @@ def scaleLink(H, linkDimensions):
     linkDimensions["Head"]["Y"] = 0.13 * H
     linkDimensions["Head"]["Z"] = 0.13 * H
 
-    linkDimensions["Neck"]["Z"] = 0.152 * H
+    linkDimensions["Neck"]["Z"] = 0.052 * H
 
     linkDimensions["UpperArm"]["Y"] = 0.186 * H
 
