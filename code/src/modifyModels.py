@@ -19,72 +19,72 @@ def modifyLinkDimension(linkDimensions, robot):
         "Pelvis", linkDimensions["Pelvis"]["X"], None, None, "X", "BOX", robot
     )  # width
 
-    # L5
+    # BottomLumbar
     setLinkLength(
-        "L5",
-        linkDimensions["L5"]["Z"],
+        "BottomLumbar",
+        linkDimensions["BottomLumbar"]["Z"],
         None,
-        linkDimensions["L5"]["Z"] / 2,
+        linkDimensions["BottomLumbar"]["Z"] / 2,
         "Z",
         "BOX",
         robot,
     )
     setLinkLength(
-        "L5", linkDimensions["L5"]["Y"], None, None, "Y", "BOX", robot
+        "BottomLumbar", linkDimensions["BottomLumbar"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
-        "L5", linkDimensions["L5"]["X"], None, None, "X", "BOX", robot
+        "BottomLumbar", linkDimensions["BottomLumbar"]["X"], None, None, "X", "BOX", robot
     )  # width
     
-    # L3
+    # MidLumbar
     setLinkLength(
-        "L3",
-        linkDimensions["L3"]["Z"],
+        "MidLumbar",
+        linkDimensions["MidLumbar"]["Z"],
         None,
-        linkDimensions["L3"]["Z"] / 2,
+        linkDimensions["MidLumbar"]["Z"] / 2,
         "Z",
         "BOX",
         robot,
     )
     setLinkLength(
-        "L3", linkDimensions["L3"]["Y"], None, None, "Y", "BOX", robot
+        "MidLumbar", linkDimensions["MidLumbar"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
-        "L3", linkDimensions["L3"]["X"], None, None, "X", "BOX", robot
+        "MidLumbar", linkDimensions["MidLumbar"]["X"], None, None, "X", "BOX", robot
     )  # width
     
-    # T12
+    # TopLumbar
     setLinkLength(
-        "T12",
-        linkDimensions["T12"]["Z"],
+        "TopLumbar",
+        linkDimensions["TopLumbar"]["Z"],
         None,
-        linkDimensions["T12"]["Z"] / 2,
+        linkDimensions["TopLumbar"]["Z"] / 2,
         "Z",
         "BOX",
         robot,
     )
     setLinkLength(
-        "T12", linkDimensions["T12"]["Y"], None, None, "Y", "BOX", robot
+        "TopLumbar", linkDimensions["TopLumbar"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
-        "T12", linkDimensions["T12"]["X"], None, None, "X", "BOX", robot
+        "TopLumbar", linkDimensions["TopLumbar"]["X"], None, None, "X", "BOX", robot
     )  # width
     
-    # T8
+    # Chest
     setLinkLength(
-        "T8",
-        linkDimensions["T8"]["Z"],
+        "Chest",
+        linkDimensions["Chest"]["Z"],
         None,
-        linkDimensions["T8"]["Z"] / 2,
+        linkDimensions["Chest"]["Z"] / 2,
         "Z",
         "BOX",
         robot,
     )
     setLinkLength(
-        "T8", linkDimensions["T8"]["Y"], None, None, "Y", "BOX", robot
+        "Chest", linkDimensions["Chest"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
-        "T8", linkDimensions["T8"]["X"], None, None, "X", "BOX", robot
+        "Chest", linkDimensions["Chest"]["X"], None, None, "X", "BOX", robot
     )  # width
     
 
@@ -365,17 +365,17 @@ def modifyLinkmass(linkMass, robot):
     # MASS PELVIS
     setMassPercentage("Pelvis", linkMass["Pelvis_mass"], "Z", robot)
     
-    # MASS L5
-    setMassPercentage("L5", linkMass["L5_mass"], "Z", robot)
+    # MASS BottomLumbar
+    setMassPercentage("BottomLumbar", linkMass["BottomLumbar_mass"], "Z", robot)
     
-    # MASS L3
-    setMassPercentage("L3", linkMass["L3_mass"], "Z", robot)
+    # MASS MidLumbar
+    setMassPercentage("MidLumbar", linkMass["MidLumbar_mass"], "Z", robot)
     
-    # MASS T12
-    setMassPercentage("T12", linkMass["T12_mass"], "Z", robot)
+    # MASS TopLumbar
+    setMassPercentage("TopLumbar", linkMass["TopLumbar_mass"], "Z", robot)
     
-    # MASS T8
-    setMassPercentage("T8", linkMass["T8_mass"], "Z", robot)
+    # MASS Chest
+    setMassPercentage("Chest", linkMass["Chest_mass"], "Z", robot)
 
     # MASS RIGHT SHOULDER
     setMassPercentage("RightShoulder", linkMass["Shoulder_mass"], "Z", robot)
@@ -445,39 +445,39 @@ def modifyJointPosition(jointPosition, robot):
     # JOINT MODIFICATION
     ##############################################################################################
 
-    # JOINT Pelvis-L5
-    setJointPosition("jL5S1_rotx", jointPosition["jL5S1"]["Z"], "Z", robot)
+    # JOINT Pelvis-BottomLumbar
+    setJointPosition("jBottomLumbarPelvis_rotx", jointPosition["jBottomLumbarPelvis"]["Z"], "Z", robot)
     
-    # JOINT L5-L3
-    setJointPosition("jL4L3_rotx", jointPosition["jL4L3"]["Z"], "Z", robot)
+    # JOINT BottomLumbar-MidLumbar
+    setJointPosition("jBottomLumbarMidLumbar_rotx", jointPosition["jBottomLumbarMidLumbar"]["Z"], "Z", robot)
     
-    # JOINT L3-T12
-    setJointPosition("jL1T12_rotx", jointPosition["jL1T12"]["Z"], "Z", robot)
+    # JOINT MidLumbar-TopLumbar
+    setJointPosition("jMidLumbarTopLumbar_rotx", jointPosition["jMidLumbarTopLumbar"]["Z"], "Z", robot)
 
-    # JOINT T12-T8
-    setJointPosition("jT9T8_rotx", jointPosition["jT9T8"]["Z"], "Z", robot)
+    # JOINT TopLumbar-Chest
+    setJointPosition("jTopLumbarChest_rotx", jointPosition["jTopLumbarChest"]["Z"], "Z", robot)
 
-    # JOINT T8-RightShoulder
+    # JOINT Chest-RightShoulder
     setJointPosition(
-        "jC7RightShoulder_rotx", jointPosition["jC7RightShoulder"]["Z"], "Z", robot
+        "jChestRightShoulder_rotx", jointPosition["jChestRightShoulder"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jC7RightShoulder_rotx", jointPosition["jC7RightShoulder"]["Y"], "Y", robot
+        "jChestRightShoulder_rotx", jointPosition["jChestRightShoulder"]["Y"], "Y", robot
     )
 
-    # JOINT T8-LeftShoulder
+    # JOINT Chest-LeftShoulder
     setJointPosition(
-        "jC7LeftShoulder_rotx", jointPosition["jC7LeftShoulder"]["Z"], "Z", robot
+        "jChestLeftShoulder_rotx", jointPosition["jChestLeftShoulder"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jC7LeftShoulder_rotx", jointPosition["jC7LeftShoulder"]["Y"], "Y", robot
+        "jChestLeftShoulder_rotx", jointPosition["jChestLeftShoulder"]["Y"], "Y", robot
     )
 
-    # JOINT T8 - NECK
-    setJointPosition("jT1C7_rotx", jointPosition["jT1C7"]["Z"], "Z", robot)
+    # JOINT Chest - NECK
+    setJointPosition("jNeckChest_rotx", jointPosition["jNeckChest"]["Z"], "Z", robot)
 
     # JOINT NECK - HEAD
-    setJointPosition("jC1Head_rotx", jointPosition["jC1Head"]["Z"], "Z", robot)
+    setJointPosition("jNeckHead_rotx", jointPosition["jNeckHead"]["Z"], "Z", robot)
 
     # JOINT RIGHT SHOULDER
     setJointPosition(

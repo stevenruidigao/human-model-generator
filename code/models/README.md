@@ -7,7 +7,7 @@ The first image highlights the meshes of the links and muscles, showing the gene
 ![Adobe Express - file](https://github.com/user-attachments/assets/77644cde-a191-478c-a6fa-6bbf9e8d2c61)
 
 The second image emphasizes the meshes of the spinal cord, from the pelvis to the neck, with a transparency effect applied to better distinguish this component within the model:
-![Adobe Express - file (1)](https://github.com/user-attachments/assets/e60464be-d354-461b-b5c7-cfdada3df1eb)
+![Adobe Express - file (1)](https://github.com/user-attachments/assets/e60464be-d354-461b-b5Chest-cfdada3df1eb)
 
 
 

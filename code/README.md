@@ -9,7 +9,7 @@ Below are the parameters that can be manually modified to configure the model. T
 | H                | Total height [m]                                                                                             |
 | m                | Total body mass [Kg]                                                                                         |
 | Neck [X, Y]         | Circumference of the neck [m]                                                                                                                        |
-| T8 [X] = T12 [X] =  L3 [X] =  L5 [X] | Depth of the trunk [m]                                                                                                                  |
+| Chest [X] = TopLumbar [X] =  MidLumbar [X] =  BottomLumbar [X] | Depth of the trunk [m]                                                                                                                  |
 | Pelvis [X]       | Depth of the pelvis [m]                                                                                                                      |
 | Shoulder [Z]  | Width of the shoulder [m]                                                                                                                       |
 | UpperArm [X, Z]  | Circumference of the upper arm [m]                                                                                                                   |

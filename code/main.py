@@ -141,10 +141,10 @@ print(
         round(
             linkMass["Head_mass"]
             + linkMass["Neck_mass"]
-            + linkMass["T8_mass"]
-            + linkMass["T12_mass"]
-            + linkMass["L3_mass"]
-            + linkMass["L5_mass"]
+            + linkMass["Chest_mass"]
+            + linkMass["TopLumbar_mass"]
+            + linkMass["MidLumbar_mass"]
+            + linkMass["BottomLumbar_mass"]
             + (linkMass["Shoulder_mass"] * 2)
             + linkMass["Pelvis_mass"]
             + (linkMass["UpperArm_mass"] * 2)
@@ -167,10 +167,10 @@ print(
         round(
             linkDimensions["Head"]["Z"]
             + linkDimensions["Neck"]["Z"]
-            + linkDimensions["T8"]["Z"]
-            + linkDimensions["T12"]["Z"]
-            + linkDimensions["L3"]["Z"]
-            + linkDimensions["L5"]["Z"]
+            + linkDimensions["Chest"]["Z"]
+            + linkDimensions["TopLumbar"]["Z"]
+            + linkDimensions["MidLumbar"]["Z"]
+            + linkDimensions["BottomLumbar"]["Z"]
             + linkDimensions["Pelvis"]["Z"]
             + linkDimensions["UpperLeg"]["Z"]
             + linkDimensions["LowerLeg"]["Z"]
