@@ -36,11 +36,12 @@ URDF_TEMPLATE_FILE_PATH = os.path.join(
 )
 
 URDF_MESHES_FILE_PATH = os.path.join(
-    os.path.dirname(__file__),
-    URDF_MAIN_FOLDER,
-    URDF_TEMPLATE_FILE_FOLDER,
+    # os.path.dirname(__file__),
+    # URDF_MAIN_FOLDER,
+    # URDF_TEMPLATE_FILE_FOLDER,
     URDF_MESHES_FILE_FOLDER,
 )
+print("urdf meshes path: ", URDF_MESHES_FILE_PATH)
 
 URDF_FILE_FOLDER = "humanModels"
 URDF_FILE_NAME = input("\n[INPUT] Insert the model name: ") + ".urdf"
