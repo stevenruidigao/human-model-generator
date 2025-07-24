@@ -1,59 +1,59 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <robot name="HumanModel">
-  <link name="Pelvis">
+  <link name="base">
     <inertial>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
       <mass value="6.9797"/>
       <inertia ixx="0.06863357540044689" ixy="0.0" ixz="0.0" iyy="0.03925570388307751" iyz="0.0" izz="0.0882690902673694"/>
     </inertial>
-    <visual name="Pelvis">
+    <visual name="base">
       <geometry>
-        <mesh filename="meshes/Pelvis.stl" scale="1. 1. 1."/>
+        <mesh filename="meshes/base.stl" scale="1. 1. 1."/>
       </geometry>
       <material name="Link">
         <color rgba="0.9922 0.8667 0.7922 1.    "/>
       </material>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
     </visual>
-    <visual name="Pelvis_RightRecAbd">
+    <visual name="base_RightRecAbd">
       <geometry>
-        <mesh filename="meshes/Pelvis_RightRecAbd.stl" scale="1. 1. 1."/>
+        <mesh filename="meshes/base_RightRecAbd.stl" scale="1. 1. 1."/>
       </geometry>
       <material name="muscle">
         <color rgba="0.9922 0.8667 0.7922 1.    "/>
       </material>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
     </visual>
-    <visual name="Pelvis_RightErcSpin">
+    <visual name="base_RightErcSpin">
       <geometry>
-        <mesh filename="meshes/Pelvis_RightErcSpin.stl" scale="1. 1. 1."/>
+        <mesh filename="meshes/base_RightErcSpin.stl" scale="1. 1. 1."/>
       </geometry>
       <material name="muscle">
         <color rgba="0.9922 0.8667 0.7922 1.    "/>
       </material>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
     </visual>
-    <visual name="Pelvis_LeftRecAbd">
+    <visual name="base_LeftRecAbd">
       <geometry>
-        <mesh filename="meshes/Pelvis_LeftRecAbd.stl" scale="1. 1. 1."/>
+        <mesh filename="meshes/base_LeftRecAbd.stl" scale="1. 1. 1."/>
       </geometry>
       <material name="muscle">
         <color rgba="0.9922 0.8667 0.7922 1.    "/>
       </material>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
     </visual>
-    <visual name="Pelvis_LeftErcSpin">
+    <visual name="base_LeftErcSpin">
       <geometry>
-        <mesh filename="meshes/Pelvis_LeftErcSpin.stl" scale="1. 1. 1."/>
+        <mesh filename="meshes/base_LeftErcSpin.stl" scale="1. 1. 1."/>
       </geometry>
       <material name="muscle">
         <color rgba="0.9922 0.8667 0.7922 1.    "/>
       </material>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
     </visual>
-    <visual name="Pelvis_SpinalCord">
+    <visual name="base_SpinalCord">
       <geometry>
-        <mesh filename="meshes/Pelvis_SpinalCord.stl" scale="1. 1. 1."/>
+        <mesh filename="meshes/base_SpinalCord.stl" scale="1. 1. 1."/>
       </geometry>
       <material name="bone">
         <color rgba="0.9922 0.8667 0.7922 1.    "/>
@@ -1498,15 +1498,15 @@
       <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
     </inertial>
   </link>
-  <joint name="jBottomLumbarPelvis_rotx" type="revolute">
+  <joint name="jBottomLumbarbase_rotx" type="revolute">
     <dynamics damping="0.1" friction="0.0"/>
     <limit effort="30.0" velocity="1.0" lower="-0.610865" upper="0.610865"/>
-    <parent link="Pelvis"/>
+    <parent link="base"/>
     <child link="BottomLumbar_f1"/>
     <axis xyz="1. 0. 0."/>
     <origin xyz="0.0 0.0 0.064935" rpy="0.0 0.0 0.0"/>
   </joint>
-  <joint name="jBottomLumbarPelvis_roty" type="revolute">
+  <joint name="jBottomLumbarbase_roty" type="revolute">
     <dynamics damping="0.1" friction="0.0"/>
     <limit effort="30.0" velocity="1.0" lower="-0.523599" upper="1.309"/>
     <parent link="BottomLumbar_f1"/>
@@ -1785,7 +1785,7 @@
   <joint name="jRightHip_rotx" type="revolute">
     <dynamics damping="0.1" friction="0.0"/>
     <limit effort="30.0" velocity="1.0" lower="-0.785398" upper="0.523599"/>
-    <parent link="Pelvis"/>
+    <parent link="base"/>
     <child link="RightUpperLeg_f1"/>
     <axis xyz="1. 0. 0."/>
     <origin xyz="0.0 -0.08420467674680919 -0.064935" rpy="0.0 0.0 0.0"/>
@@ -1873,7 +1873,7 @@
   <joint name="jLeftHip_rotx" type="revolute">
     <dynamics damping="0.1" friction="0.0"/>
     <limit effort="30.0" velocity="1.0" lower="-0.523599" upper="0.785398"/>
-    <parent link="Pelvis"/>
+    <parent link="base"/>
     <child link="LeftUpperLeg_f1"/>
     <axis xyz="1. 0. 0."/>
     <origin xyz="0.0 0.08420467674680919 -0.064935" rpy="0.0 0.0 0.0"/>
@@ -2061,7 +2061,7 @@
     <origin xyz="0.030000000000000002 -0.0718725 0.0" rpy="0.0 0.0 0.0"/>
   </joint>
   <joint name="jRightRecAbd_RP" type="fixed">
-    <parent link="Pelvis"/>
+    <parent link="base"/>
     <child link="RecAbd_RP"/>
     <axis xyz="1. 0. 0."/>
     <origin xyz="0.1125 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -2073,7 +2073,7 @@
     <origin xyz="-0.030000000000000002 -0.0718725 0.1380285" rpy="0.0 0.0 0.0"/>
   </joint>
   <joint name="jRightErSpin_RP" type="fixed">
-    <parent link="Pelvis"/>
+    <parent link="base"/>
     <child link="ErSpin_RP"/>
     <axis xyz="1. 0. 0."/>
     <origin xyz="-0.1125 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -2085,7 +2085,7 @@
     <origin xyz="0.030000000000000002 0.0718725 0.0" rpy="0.0 0.0 0.0"/>
   </joint>
   <joint name="jLeftRecAbd_LP" type="fixed">
-    <parent link="Pelvis"/>
+    <parent link="base"/>
     <child link="RecAbd_LP"/>
     <axis xyz="1. 0. 0."/>
     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -2097,13 +2097,13 @@
     <origin xyz="-0.030000000000000002 0.0718725 0.1380285" rpy="0.0 0.0 0.0"/>
   </joint>
   <joint name="jLeftErSpin_LP" type="fixed">
-    <parent link="Pelvis"/>
+    <parent link="base"/>
     <child link="ErSpin_LP"/>
     <axis xyz="1. 0. 0."/>
     <origin xyz="-0.1125 0.0 0.0" rpy="0.0 0.0 0.0"/>
   </joint>
   <joint name="jRightRecFem_RP" type="fixed">
-    <parent link="Pelvis"/>
+    <parent link="base"/>
     <child link="RecFem_RLT"/>
     <axis xyz="1. 0. 0."/>
     <origin xyz="0.1125 -0.106005 -0.064935" rpy="0.0 0.0 0.0"/>
@@ -2127,7 +2127,7 @@
     <origin xyz="0.0 -0.05411268065124442 0.0" rpy="0.0 0.0 0.0"/>
   </joint>
   <joint name="jLeftRecFem_LP" type="fixed">
-    <parent link="Pelvis"/>
+    <parent link="base"/>
     <child link="RecFem_LLT"/>
     <axis xyz="1. 0. 0."/>
     <origin xyz="0.1125 0.106005 -0.064935" rpy="0.0 0.0 0.0"/>

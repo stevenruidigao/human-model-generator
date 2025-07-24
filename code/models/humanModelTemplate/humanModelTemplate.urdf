@@ -6,22 +6,22 @@
 # PELVI  ORIGIN
 ##############################################################################
 	<!--Link base (1)-->
-	<link name="Pelvis">
+	<link name="base">
         <inertial>
             <mass value="1e-5"/>
-            <!--box origin wrt Pelvis-->
+            <!--box origin wrt base-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
         <visual>
-			<!--box origin wrt Pelvis-->
+			<!--box origin wrt base-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
             </geometry>
         </visual>
         <collision>
-			<!--box origin wrt Pelvis-->
+			<!--box origin wrt base-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
@@ -49,14 +49,14 @@
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
         <visual>
-			<!--box origin origin wrt jBottomLumbarPelvis-->
+			<!--box origin origin wrt jBottomLumbarbase-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
             </geometry>
         </visual>
         <collision>
-			<!--box origin origin wrt jBottomLumbarPelvis-->
+			<!--box origin origin wrt jBottomLumbarbase-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
@@ -974,15 +974,15 @@
 ##############################################################################
 # PELVI - BottomLumbar
 ##############################################################################
-	<joint name="jBottomLumbarPelvis_rotx" type="revolute">
+	<joint name="jBottomLumbarbase_rotx" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="Pelvis"/>
+        <parent link="base"/>
         <child link="BottomLumbar_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-0.610865" upper="0.610865" />
         <axis xyz="1 0 0" />
     </joint>
-	<joint name="jBottomLumbarPelvis_roty" type="revolute">
+	<joint name="jBottomLumbarbase_roty" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="BottomLumbar_f1"/>
         <child link="BottomLumbar"/>
@@ -1309,7 +1309,7 @@
 ##############################################################################
 	<joint name="jRightHip_rotx" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="Pelvis"/>
+        <parent link="base"/>
         <child link="RightUpperLeg_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-0.785398" upper="0.523599" />
@@ -1415,7 +1415,7 @@
 ##############################################################################
 	<joint name="jLeftHip_rotx" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="Pelvis"/>
+        <parent link="base"/>
         <child link="LeftUpperLeg_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-0.523599" upper="0.785398" />
@@ -2120,7 +2120,7 @@
 ##############################################################################
     <joint name="jRightRecAbd_RP" type="fixed">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="Pelvis"/>
+        <parent link="base"/>
         <child link="RecAbd_RP"/>
         <axis xyz="0 0 0" />
     </joint>
@@ -2138,7 +2138,7 @@
 ##############################################################################
     <joint name="jRightErSpin_RP" type="fixed">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="Pelvis"/>
+        <parent link="base"/>
         <child link="ErSpin_RP"/>
         <axis xyz="0 0 0" />
     </joint>
@@ -2156,7 +2156,7 @@
 ##############################################################################
     <joint name="jLeftRecAbd_LP" type="fixed">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="Pelvis"/>
+        <parent link="base"/>
         <child link="RecAbd_LP"/>
         <axis xyz="0 0 0" />
     </joint>
@@ -2174,7 +2174,7 @@
 ##############################################################################
     <joint name="jLeftErSpin_LP" type="fixed">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="Pelvis"/>
+        <parent link="base"/>
         <child link="ErSpin_LP"/>
         <axis xyz="0 0 0" />
     </joint>
@@ -2183,7 +2183,7 @@
 ##############################################################################
     <joint name="jRightRecFem_RP" type="fixed">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="Pelvis"/>
+        <parent link="base"/>
         <child link="RecFem_RLT"/>
         <axis xyz="0 0 0" />
     </joint>
@@ -2219,7 +2219,7 @@
 ##############################################################################
     <joint name="jLeftRecFem_LP" type="fixed">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="Pelvis"/>
+        <parent link="base"/>
         <child link="RecFem_LLT"/>
         <axis xyz="0 0 0" />
     </joint>

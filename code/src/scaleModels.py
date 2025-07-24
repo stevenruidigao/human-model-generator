@@ -13,11 +13,11 @@ def scaleLink(H, linkDimensions):
     linkDimensions["Head"]["Y"] = 0.13 * H
     linkDimensions["Head"]["Z"] = 0.13 * H
 
-    linkDimensions["Neck"]["Z"] = 0.052 * H
+    linkDimensions["Neck"]["Z"] = 0.152 * H
 
-    linkDimensions["UpperArm"]["Y"] = 0.186 * H
+    linkDimensions["UpperArm"]["Y"] = 0.196 * H
 
-    linkDimensions["ForeArm"]["Y"] = 0.146 * H
+    linkDimensions["ForeArm"]["Y"] = 0.156 * H
 
     linkDimensions["Hand"]["Y"] = 0.108 * H
 
@@ -29,10 +29,10 @@ def scaleLink(H, linkDimensions):
     linkDimensions["Foot"]["Y"] = 0.055 * H
     linkDimensions["Foot"]["Z"] = 0.039 * H
     
-    linkDimensions["Chest"]["Z"] = 0.0829 * H
+    linkDimensions["Chest"]["Z"] = 0.118 * H
     linkDimensions["Chest"]["Y"] = 0.259 * H / 3
     
-    linkDimensions["TopLumbar"]["Z"] = 0.0526* H
+    linkDimensions["TopLumbar"]["Z"] = 0.08* H
     linkDimensions["TopLumbar"]["Y"] = 0.1
     
     linkDimensions["MidLumbar"]["Z"] = 0.045 * H
@@ -43,8 +43,8 @@ def scaleLink(H, linkDimensions):
 
     linkDimensions["Shoulder"]["Y"] = 0.259 * H / 3
 
-    linkDimensions["Pelvis"]["Z"] = 0.078 * H
-    linkDimensions["Pelvis"]["Y"] = 0.191 * H
+    linkDimensions["base"]["Z"] = 0.078 * H
+    linkDimensions["base"]["Y"] = 0.191 * H
 
     # Toe dimensions
     linkDimensions["Toe"]["X"] = linkDimensions["Foot"]["X"] / 100
@@ -56,6 +56,8 @@ def scaleLink(H, linkDimensions):
     linkDimensions["Heel"]["Y"] = linkDimensions["Foot"]["Y"]
     linkDimensions["Heel"]["Z"] = linkDimensions["Foot"]["Z"] 
     
+    linkDimensions["BottomLumbar"]["Z"] = 0.019 * H
+    linkDimensions["MidLumbar"]["Z"] = 0.05 * H
     
     
     
@@ -73,9 +75,9 @@ def scaleLink(H, linkDimensions):
 
 def scaleJoint(linkDimensions, jointPosition):
     # Joints' position modification
-    jointPosition["jBottomLumbarPelvis"]["X"] = 0
-    jointPosition["jBottomLumbarPelvis"]["Y"] = 0
-    jointPosition["jBottomLumbarPelvis"]["Z"] = linkDimensions["Pelvis"]["Z"] / 2
+    jointPosition["jBottomLumbarbase"]["X"] = 0
+    jointPosition["jBottomLumbarbase"]["Y"] = 0
+    jointPosition["jBottomLumbarbase"]["Z"] = linkDimensions["base"]["Z"] / 2
 
     jointPosition["jTopLumbarChest"]["X"] = 0
     jointPosition["jTopLumbarChest"]["Y"] = 0
@@ -136,9 +138,9 @@ def scaleJoint(linkDimensions, jointPosition):
 
     jointPosition["jRightHip"]["X"] = 0
     jointPosition["jRightHip"]["Y"] = -(
-        linkDimensions["Pelvis"]["Y"] / 2 - linkDimensions["UpperLeg"]["X"] / 2
+        linkDimensions["base"]["Y"] / 2 - linkDimensions["UpperLeg"]["X"] / 2
     )
-    jointPosition["jRightHip"]["Z"] = -linkDimensions["Pelvis"]["Z"] / 2
+    jointPosition["jRightHip"]["Z"] = -linkDimensions["base"]["Z"] / 2
 
     jointPosition["jRightKnee"]["X"] = 0
     jointPosition["jRightKnee"]["Y"] = 0
@@ -158,9 +160,9 @@ def scaleJoint(linkDimensions, jointPosition):
 
     jointPosition["jLeftHip"]["X"] = 0
     jointPosition["jLeftHip"]["Y"] = (
-        linkDimensions["Pelvis"]["Y"] / 2 - linkDimensions["UpperLeg"]["X"] / 2
+        linkDimensions["base"]["Y"] / 2 - linkDimensions["UpperLeg"]["X"] / 2
     )
-    jointPosition["jLeftHip"]["Z"] = -linkDimensions["Pelvis"]["Z"] / 2
+    jointPosition["jLeftHip"]["Z"] = -linkDimensions["base"]["Z"] / 2
 
     jointPosition["jLeftKnee"]["X"] = 0
     jointPosition["jLeftKnee"]["Y"] = 0
@@ -325,7 +327,7 @@ def scaleMuscleJoint(linkDimensions, jointMusclePosition):
     )
     jointMusclePosition["jRightErSpin_RUT"]["Z"] = linkDimensions["Chest"]["Z"]
 
-    jointMusclePosition["jRightErSpin_RP"]["X"] = -linkDimensions["Pelvis"]["X"] / 2
+    jointMusclePosition["jRightErSpin_RP"]["X"] = -linkDimensions["base"]["X"] / 2
     jointMusclePosition["jRightErSpin_RP"]["Y"] = 0
     jointMusclePosition["jRightErSpin_RP"]["Z"] = 0
 
@@ -333,7 +335,7 @@ def scaleMuscleJoint(linkDimensions, jointMusclePosition):
     jointMusclePosition["jLeftErSpin_LUT"]["Y"] = linkDimensions["Chest"]["Y"] / 2
     jointMusclePosition["jLeftErSpin_LUT"]["Z"] = linkDimensions["Chest"]["Z"]
 
-    jointMusclePosition["jLeftErSpin_LP"]["X"] = -linkDimensions["Pelvis"]["X"] / 2
+    jointMusclePosition["jLeftErSpin_LP"]["X"] = -linkDimensions["base"]["X"] / 2
     jointMusclePosition["jLeftErSpin_LP"]["Y"] = 0
     jointMusclePosition["jLeftErSpin_LP"]["Z"] = 0
 
@@ -343,14 +345,14 @@ def scaleMuscleJoint(linkDimensions, jointMusclePosition):
         -linkDimensions["Chest"]["Y"] / 2
     )
     jointMusclePosition["jRightRecAbd_RUT"]["Z"] = 0
-    jointMusclePosition["jRightRecAbd_RP"]["X"] = linkDimensions["Pelvis"]["X"] / 2
+    jointMusclePosition["jRightRecAbd_RP"]["X"] = linkDimensions["base"]["X"] / 2
     jointMusclePosition["jRightRecAbd_RP"]["Y"] = 0
     jointMusclePosition["jRightRecAbd_RP"]["Z"] = 0
 
     jointMusclePosition["jLeftRecAbd_LUT"]["X"] = linkDimensions["Chest"]["X"] / 2
     jointMusclePosition["jLeftRecAbd_LUT"]["Y"] = linkDimensions["Chest"]["Y"] / 2
     jointMusclePosition["jLeftRecAbd_LUT"]["Z"] = 0
-    jointMusclePosition["jLeftRecAbd_LP"]["X"] = linkDimensions["Pelvis"]["X"] / 2
+    jointMusclePosition["jLeftRecAbd_LP"]["X"] = linkDimensions["base"]["X"] / 2
     jointMusclePosition["jLeftRecAbd_LP"]["Y"] = 0
     jointMusclePosition["jLeftRecAbd_LP"]["Z"] = 0
 
@@ -386,9 +388,9 @@ def scaleMuscleJoint(linkDimensions, jointMusclePosition):
     jointMusclePosition["jLeftBicFem_LLL"]["Z"] = 0
 
     # Rectus femoris
-    jointMusclePosition["jRightRecFem_RP"]["X"] = linkDimensions["Pelvis"]["X"] / 2
-    jointMusclePosition["jRightRecFem_RP"]["Y"] = -linkDimensions["Pelvis"]["Y"] / 3
-    jointMusclePosition["jRightRecFem_RP"]["Z"] = -linkDimensions["Pelvis"]["Z"] / 2
+    jointMusclePosition["jRightRecFem_RP"]["X"] = linkDimensions["base"]["X"] / 2
+    jointMusclePosition["jRightRecFem_RP"]["Y"] = -linkDimensions["base"]["Y"] / 3
+    jointMusclePosition["jRightRecFem_RP"]["Z"] = -linkDimensions["base"]["Z"] / 2
     jointMusclePosition["jRightRecFem_RLL"]["X"] = (
         linkDimensions["LowerLeg"]["X"] / 2
     ) * np.sin(pi / 2)
@@ -397,9 +399,9 @@ def scaleMuscleJoint(linkDimensions, jointMusclePosition):
     )
     jointMusclePosition["jRightRecFem_RLL"]["Z"] = 0
 
-    jointMusclePosition["jLeftRecFem_LP"]["X"] = linkDimensions["Pelvis"]["X"] / 2
-    jointMusclePosition["jLeftRecFem_LP"]["Y"] = linkDimensions["Pelvis"]["Y"] / 3
-    jointMusclePosition["jLeftRecFem_LP"]["Z"] = -linkDimensions["Pelvis"]["Z"] / 2
+    jointMusclePosition["jLeftRecFem_LP"]["X"] = linkDimensions["base"]["X"] / 2
+    jointMusclePosition["jLeftRecFem_LP"]["Y"] = linkDimensions["base"]["Y"] / 3
+    jointMusclePosition["jLeftRecFem_LP"]["Z"] = -linkDimensions["base"]["Z"] / 2
     jointMusclePosition["jLeftRecFem_LLL"]["X"] = (
         linkDimensions["LowerLeg"]["X"] / 2
     ) * np.sin(pi / 2)
@@ -490,7 +492,7 @@ def scaleMass(TotalMass, linkMass):
     linkMass["MidLumbar_mass"] = 0.0444 * TotalMass
     linkMass["BottomLumbar_mass"] = 0.0291 * TotalMass
     linkMass["Shoulder_mass"] = 0.0523 * TotalMass
-    linkMass["Pelvis_mass"] = 0.1183 * TotalMass
+    linkMass["base_mass"] = 0.1183 * TotalMass
     linkMass["UpperArm_mass"] = 0.0263 * TotalMass
     linkMass["ForeArm_mass"] = 0.015 * TotalMass
     linkMass["Hand_mass"] = 0.0059 * TotalMass

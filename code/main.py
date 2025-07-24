@@ -146,7 +146,7 @@ print(
             + linkMass["MidLumbar_mass"]
             + linkMass["BottomLumbar_mass"]
             + (linkMass["Shoulder_mass"] * 2)
-            + linkMass["Pelvis_mass"]
+            + linkMass["base_mass"]
             + (linkMass["UpperArm_mass"] * 2)
             + (linkMass["ForeArm_mass"] * 2)
             + (linkMass["Hand_mass"] * 2)
@@ -171,7 +171,7 @@ print(
             + linkDimensions["TopLumbar"]["Z"]
             + linkDimensions["MidLumbar"]["Z"]
             + linkDimensions["BottomLumbar"]["Z"]
-            + linkDimensions["Pelvis"]["Z"]
+            + linkDimensions["base"]["Z"]
             + linkDimensions["UpperLeg"]["Z"]
             + linkDimensions["LowerLeg"]["Z"]
             + linkDimensions["Foot"]["Z"],
@@ -220,7 +220,7 @@ if OPT_CHECK_CONSISTENCY_MODEL:
     G_T_base = iDynTree.Transform(G_T_b_rot, G_T_b_pos)
     base_vel = iDynTree.Twist([0, 0, 0, 0, 0, 0])
 
-    dynComp.setFloatingBase("Pelvis")
+    dynComp.setFloatingbase("base")
     mass_mx = iDynTree.MatrixDynSize()
 
     num_rows, num_cols = s.shape

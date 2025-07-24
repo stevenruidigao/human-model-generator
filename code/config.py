@@ -30,7 +30,7 @@ from src import linkDimensions
 
 linkDimensions["Neck"]["X"] = linkDimensions["Neck"]["Y"] = 0.32
 linkDimensions["Chest"]["X"] = linkDimensions["TopLumbar"]["X"] = linkDimensions["MidLumbar"]["X"] = linkDimensions["BottomLumbar"]["X"] = 0.19
-linkDimensions["Pelvis"]["X"] = 0.225
+linkDimensions["base"]["X"] = 0.225
 linkDimensions["Shoulder"]["Z"] = 0.115
 linkDimensions["UpperArm"]["X"] = linkDimensions["UpperArm"]["Z"] = 0.28
 linkDimensions["ForeArm"]["X"] = linkDimensions["ForeArm"]["Z"] = 0.22

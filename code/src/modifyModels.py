@@ -11,12 +11,12 @@ def modifyLinkDimension(linkDimensions, robot):
     ##############################################################################################
 
     # PELVIS
-    setLinkLength("Pelvis", linkDimensions["Pelvis"]["Z"], None, 0, "Z", "BOX", robot)
+    setLinkLength("base", linkDimensions["base"]["Z"], None, 0, "Z", "BOX", robot)
     setLinkLength(
-        "Pelvis", linkDimensions["Pelvis"]["Y"], None, None, "Y", "BOX", robot
+        "base", linkDimensions["base"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
-        "Pelvis", linkDimensions["Pelvis"]["X"], None, None, "X", "BOX", robot
+        "base", linkDimensions["base"]["X"], None, None, "X", "BOX", robot
     )  # width
 
     # BottomLumbar
@@ -363,7 +363,7 @@ def modifyLinkmass(linkMass, robot):
     ##############################################################################################
 
     # MASS PELVIS
-    setMassPercentage("Pelvis", linkMass["Pelvis_mass"], "Z", robot)
+    setMassPercentage("base", linkMass["base_mass"], "Z", robot)
     
     # MASS BottomLumbar
     setMassPercentage("BottomLumbar", linkMass["BottomLumbar_mass"], "Z", robot)
@@ -445,8 +445,8 @@ def modifyJointPosition(jointPosition, robot):
     # JOINT MODIFICATION
     ##############################################################################################
 
-    # JOINT Pelvis-BottomLumbar
-    setJointPosition("jBottomLumbarPelvis_rotx", jointPosition["jBottomLumbarPelvis"]["Z"], "Z", robot)
+    # JOINT base-BottomLumbar
+    setJointPosition("jBottomLumbarbase_rotx", jointPosition["jBottomLumbarbase"]["Z"], "Z", robot)
     
     # JOINT BottomLumbar-MidLumbar
     setJointPosition("jBottomLumbarMidLumbar_rotx", jointPosition["jBottomLumbarMidLumbar"]["Z"], "Z", robot)
